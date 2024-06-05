@@ -2,7 +2,7 @@
 
 
 /**
- * parentDoesNotExists - checks if a parent node is NULL or not
+ * parentDoesNotExist - checks if a parent node is NULL or not
  * @parent: the pointer to the parent node
  *
  * Return: 1 if true and 0 if false
