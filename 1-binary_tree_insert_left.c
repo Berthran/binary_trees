@@ -52,8 +52,8 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 
 	leftChildNode =  (binary_tree_t *)malloc(sizeof(binary_tree_t));
 
-	if (parentDoesNotExist(parent))
-		return (NULL);
+	/*if (parentDoesNotExist(parent))
+		return (NULL); */
 	if (nodeCreationFailed(leftChildNode))
 		return (NULL);
 
