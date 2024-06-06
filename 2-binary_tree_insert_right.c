@@ -29,7 +29,7 @@ int parentDoesNotExist(binary_tree_t *parent)
 int nodeCreationFailed(binary_tree_t *node)
 {
 	int FALSE = 0;
-	int TRUE = 0;
+	int TRUE = 1;
 
 	if (node == NULL)
 		return (TRUE);
