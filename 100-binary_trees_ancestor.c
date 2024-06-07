@@ -30,19 +30,23 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		return (NULL);
 	if (parentOfSecond == NULL && parentOfFirst != second)
 		return (NULL);
-
+	/* first and second are thesame */
+	if (first == second)
+	{
+		if (first->parent->right == first)
+			return (first->parent->right);
+		return (first->parent->left);
+	}
 	/* first and second are children of the same parent */
 	siblingOfFirst = get_sibling(first);
 	if (second == siblingOfFirst)
 		return (parentOfFirst);
-
 	/* first is a child of second */
 	if (first == parentOfSecond)
 		return (parentOfSecond);
 	/* second is a child of first */
 	if (second == parentOfFirst)
 		return (parentOfFirst);
-
 	/* first and second are children of different parent */
 	closestAncestor = binary_trees_ancestor(parentOfFirst, second);
 	if (closestAncestor == NULL)
