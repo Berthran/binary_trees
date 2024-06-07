@@ -52,7 +52,7 @@ binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 
 	if (parentDoesNotExist(parent))
 		return (NULL);
-	
+
 	rightChildNode = malloc(sizeof(binary_tree_t));
 	if (nodeCreationFailed(rightChildNode))
 		return (NULL);
