@@ -34,14 +34,14 @@ int binary_tree_is_full(const binary_tree_t *tree)
 
 size_t binary_tree_size(const binary_tree_t *tree)
 {
-        binary_tree_t *leftChild = NULL;
-        binary_tree_t *rightChild = NULL;
+	binary_tree_t *leftChild = NULL;
+	binary_tree_t *rightChild = NULL;
 
-        if (tree == NULL)
-                return (0);
+	if (tree == NULL)
+		return (0);
 
-        leftChild = tree->left;
-        rightChild = tree->right;
+	leftChild = tree->left;
+	rightChild = tree->right;
 
-        return (1 + binary_tree_size(leftChild) + binary_tree_size(rightChild));
+	return (1 + binary_tree_size(leftChild) + binary_tree_size(rightChild));
 }
